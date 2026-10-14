@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Kebonsari Syariah | Modern Comfort in Surabaya</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#141414',
+                            gray: '#1f1f1f',
+                            lightgray: '#2a2a2a',
+                            accent: '#ffffff',
+                            muted: '#a3a3a3'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555555;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-white font-sans antialiased selection:bg-white selection:text-black">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo (Optimized for clarity and sharp proportions) -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="h-12 sm:h-14 px-4 py-2 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <img src="img/Logo.png" alt="Grand Kebonsari Syariah Logo" class="h-full w-auto object-contain">
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#about" class="hover:text-white transition-colors">Experience</a>
+                <a href="#rooms" class="hover:text-white transition-colors">Rooms</a>
+                <a href="#video" class="hover:text-white transition-colors">Video Tour</a>
+                <a href="#location" class="hover:text-white transition-colors">Location</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="https://g.page/grandkebonsari" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-full text-xs font-semibold tracking-wide border border-white/10 transition-all">
+                    <i class="fa-solid fa-star text-yellow-400"></i> Rate Us
+                </a>
+                <a href="https://wa.me/6281234561555?text=Hello%20Grand%20Kebonsari%20Syariah,%20I%20would%20like%20to%20inquire%20about%20room%20availability." target="_blank" class="bg-white text-black hover:bg-brand-muted px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-lg shadow-white/5">
+                    Book Via WhatsApp
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center text-white focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-white/10 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-sm font-medium text-brand-muted hover:text-white py-1">Home</a>
+            <a href="#about" class="block text-sm font-medium text-brand-muted hover:text-white py-1">Experience</a>
+            <a href="#rooms" class="block text-sm font-medium text-brand-muted hover:text-white py-1">Rooms</a>
+            <a href="#video" class="block text-sm font-medium text-brand-muted hover:text-white py-1">Video Tour</a>
+            <a href="#location" class="block text-sm font-medium text-brand-muted hover:text-white py-1">Location</a>
+            <a href="https://g.page/grandkebonsari" target="_blank" class="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-xs font-semibold w-full justify-center mt-2">
+                <i class="fa-solid fa-star text-yellow-400"></i> Rate Us on Google
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+        <!-- Background Slideshow Effect -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent z-10"></div>
+            <div id="hero-slideshow" class="absolute inset-0 flex transition-opacity duration-1000">
+                <img src="img/01-Hero/Main-01.jpg" alt="Grand Kebonsari Interior" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 slide active">
+                <img src="img/01-Hero/Main-02.jpg" alt="Grand Kebonsari Bedroom" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slide">
+                <img src="img/01-Hero/Main-03.jpg" alt="Grand Kebonsari Amenities" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slide">
+                <img src="img/01-Hero/Main-04.jpg" alt="Grand Kebonsari Amenities" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slide">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-medium tracking-widest uppercase mb-6 text-white shadow-xl">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Premium Syariah Stay in Surabaya
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Where Tranquility Meets <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-neutral-500">Modern Elegance</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-brand-muted mb-10 font-light leading-relaxed">
+                Experience immaculate cleanliness, peaceful Syariah-compliant hospitality, and sophisticated design at Grand Kebonsari. Featuring 21 meticulously curated rooms designed for your utmost comfort in Surabaya.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#rooms" class="w-full sm:w-auto bg-white text-black hover:bg-neutral-200 px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase transition-all shadow-xl shadow-white/10">
+                    Explore 21 Rooms
+                </a>
+                <a href="https://wa.me/6281234561555?text=Hello%20Grand%20Kebonsari%20Syariah,%20I%20would%20like%20to%20make%20a%20reservation." target="_blank" class="w-full sm:w-auto bg-brand-dark hover:bg-brand-gray text-white border border-white/15 px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase transition-all">
+                    Direct WhatsApp Booking
+                </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
+                <div class="bg-brand-dark/80 backdrop-blur-md border border-white/10 p-6 rounded-3xl text-center">
+                    <span class="block text-3xl sm:text-4xl font-black text-white mb-1">21</span>
+                    <span class="text-xs text-brand-muted uppercase tracking-widest">Luxury Rooms</span>
+                </div>
+                <div class="bg-brand-dark/80 backdrop-blur-md border border-white/10 p-6 rounded-3xl text-center">
+                    <span class="block text-3xl sm:text-4xl font-black text-white mb-1">2</span>
+                    <span class="text-xs text-brand-muted uppercase tracking-widest">Bed Types</span>
+                </div>
+                <div class="bg-brand-dark/80 backdrop-blur-md border border-white/10 p-6 rounded-3xl text-center">
+                    <span class="block text-3xl sm:text-4xl font-black text-white mb-1">100%</span>
+                    <span class="text-xs text-brand-muted uppercase tracking-widest">Syariah Compliant</span>
+                </div>
+                <div class="bg-brand-dark/80 backdrop-blur-md border border-white/10 p-6 rounded-3xl text-center">
+                    <span class="block text-3xl sm:text-4xl font-black text-white mb-1">24/7</span>
+                    <span class="text-xs text-brand-muted uppercase tracking-widest">Guest Services</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Running Picture Marquee -->
+    <section class="py-8 bg-brand-dark border-y border-white/10 overflow-hidden">
+        <div class="relative w-full overflow-hidden">
+            <div class="animate-marquee flex gap-6">
+                <!-- Marquee Items -->
+                <div class="flex gap-6 shrink-0">
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-01.jpg" alt="Room View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Queen Bedroom Suite</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-02.jpg" alt="Interior Ambiance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Modern Interior Design</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-03.jpg" alt="Balcony View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Scenic Balcony Rooms</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-04.jpg" alt="Bathroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Immaculate Bathrooms</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-05.jpg" alt="Twin Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Twin Bed Comfort</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate for seamless looping -->
+                <div class="flex gap-6 shrink-0" aria-hidden="true">
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-06.jpg" alt="Room View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Queen Bedroom Suite</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-07.jpg" alt="Interior Ambiance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Modern Interior Design</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-08.jpg" alt="Balcony View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Scenic Balcony Rooms</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-09.jpg" alt="Bathroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Immaculate Bathrooms</span>
+                        </div>
+                    </div>
+                    <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-10.jpg" alt="Twin Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Twin Bed Comfort</span>
+                        </div>
+                    </div>
+                   <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-11.jpg" alt="Twin Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Twin Bed Comfort</span>
+                        </div>
+                    </div>
+                   <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-12.jpg" alt="Twin Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Twin Bed Comfort</span>
+                        </div>
+                    </div>
+                   <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-13.jpg" alt="Twin Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Twin Bed Comfort</span>
+                        </div>
+                    </div>
+                   <div class="w-72 h-44 rounded-2xl overflow-hidden border border-white/10 relative group">
+                        <img src="img/02-RunPics/Run-14.jpg" alt="Twin Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-white tracking-wider">Twin Bed Comfort</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Experience Section -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3 block">Immaculate Hospitality</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Designed for Peace, Comfort, and Modern Living.
+                </h2>
+                <p class="text-brand-muted text-base sm:text-lg mb-8 leading-relaxed font-light">
+                    Grand Kebonsari Syariah is meticulously crafted for discerning travelers seeking tranquility in Surabaya. Every corner reflects our dedication to pristine cleanliness, ethical Syariah standards, and sleek modern design. Whether you are traveling for business, family getaway, or spiritual pilgrimage, our 21 rooms offer the ultimate sanctuary.
+                </p>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-brand-dark p-6 rounded-3xl border border-white/10">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-4 text-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Syariah Compliant</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">Family-friendly environment adhering strictly to Islamic principles and comfortable values.</p>
+                    </div>
+                    <div class="bg-brand-dark p-6 rounded-3xl border border-white/10">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-4 text-lg">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Ultra-Fast Wi-Fi</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">High-speed fiber internet connection throughout the guesthouse for seamless work and streaming.</p>
+                    </div>
+                    <div class="bg-brand-dark p-6 rounded-3xl border border-white/10">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-4 text-lg">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Secure Parking</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">Safe and spacious parking area with 24-hour security monitoring for total peace of mind.</p>
+                    </div>
+                    <div class="bg-brand-dark p-6 rounded-3xl border border-white/10">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-4 text-lg">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">24/7 Front Desk</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">Our attentive hospitality team is always ready to assist you with check-in, local tips, and needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Collage -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <div class="rounded-3xl overflow-hidden border border-white/10 h-72">
+                        <img src="img/03-ICollage/Collage-01.jpg" alt="Hotel Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="rounded-3xl overflow-hidden border border-white/10 h-48">
+                        <img src="img/03-ICollage/Collage-02.jpg" alt="Hotel Lounge" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+                <div class="space-y-4 pt-8">
+                    <div class="rounded-3xl overflow-hidden border border-white/10 h-48">
+                        <img src="img/03-ICollage/Collage-03.jpg" alt="Hotel Balcony" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="rounded-3xl overflow-hidden border border-white/10 h-72">
+                        <img src="img/03-ICollage/Collage-04.jpg" alt="Bathroom Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms & Inventory Section -->
+    <section id="rooms" class="py-24 bg-brand-dark/50 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3 block">21 Rooms Available</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">Choose Your Ideal Stay</h2>
+                <p class="text-brand-muted text-base sm:text-lg font-light">
+                    Browse our 21 thoughtfully designed rooms featuring Queen or Twin bed configurations. Click on any room to explore its vibrant photo gallery and specific amenities.
+                </p>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
+                    <button class="room-filter active bg-white text-black px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all" data-filter="all">All Rooms (21)</button>
+                    <button class="room-filter bg-brand-dark text-brand-muted hover:text-white border border-white/10 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all" data-filter="queen">Queen Size Bed (12)</button>
+                    <button class="room-filter bg-brand-dark text-brand-muted hover:text-white border border-white/10 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all" data-filter="twin">Twin Bed (9)</button>
+                </div>
+            </div>
+
+            <!-- Rooms Grid -->
+            <div id="rooms-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room Card 1 -->
+                <div class="room-card bg-brand-dark rounded-3xl overflow-hidden border border-white/10 flex flex-col group" data-category="queen">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openRoomModal(0)">
+                        <img src="img\04-Inventory\01-Queen\01-EasyAccess-GF\01.jpg" alt="Queen BedRoom - Easy Access" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
+                            Ground Floor
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            7 Rooms Available
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> View Photos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold">Queen Size Bed (160x200)</span>
+                                <span class="text-xs text-emerald-400 font-semibold bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-900">Easy Access</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Queen BedRoom - Easy Access - Ground Floor</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Located on the ground floor with effortless entry, ideal for guests preferring no stairs.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">AC</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Free Wi-Fi</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Hot Shower</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">LED TV</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-neutral-400 block">Starting from</span>
+                                <span class="text-lg font-bold text-white">IDR 275k <span class="text-xs text-neutral-400 font-normal">/ night</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234561555?text=Hello,%20I%20would%20like%20to%20book%20Queen%20BedRoom%20-%20Easy%20Access%20(Ground%20Floor)." target="_blank" class="bg-white hover:bg-neutral-200 text-black text-sm font-bold px-5 py-2.5 rounded-full shadow-md transition-all">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="room-card bg-brand-dark rounded-3xl overflow-hidden border border-white/10 flex flex-col group" data-category="queen">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openRoomModal(1)">
+                        <img src="img\04-Inventory\01-Queen\02-With Balcony-2ndFloor\01.jpeg" alt="Queen BedRoom - with Balcony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
+                            2nd Floor
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            3 Rooms Available
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> View Photos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold">Queen Size Bed (160x200)</span>
+                                <span class="text-xs text-amber-400 font-semibold bg-amber-950/50 px-2.5 py-1 rounded-full border border-amber-900">Private Balcony</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Queen BedRoom - with Balcony - 2nd Floor</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Features a private balcony overlooking the calm neighborhood, perfect for morning relaxation.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Private Balcony</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">AC & Wi-Fi</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Hot Shower</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-neutral-400 block">Starting from</span>
+                                <span class="text-lg font-bold text-white">IDR 320k <span class="text-xs text-neutral-400 font-normal">/ night</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234561555?text=Hello,%20I%20would%20like%20to%20book%20Queen%20BedRoom%20with%20Balcony%20(2nd%20Floor)." target="_blank" class="bg-white hover:bg-neutral-200 text-black text-sm font-bold px-5 py-2.5 rounded-full shadow-md transition-all">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div class="room-card bg-brand-dark rounded-3xl overflow-hidden border border-white/10 flex flex-col group" data-category="queen">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openRoomModal(2)">
+                        <img src="img\04-Inventory\01-Queen\03-Smart Saver-3rdFloor\01.jpg" alt="Queen BedRoom - Smart Saver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
+                            3rd Floor
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            2 Rooms Available
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> View Photos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold">Queen Size Bed (160x200)</span>
+                                <span class="text-xs text-blue-400 font-semibold bg-blue-950/50 px-2.5 py-1 rounded-full border border-blue-900">Smart Saver</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Queen BedRoom - Smart Saver - 3rd Floor</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Cozy and economical option on the top floor with quiet ambiance and complete amenities.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Top Floor Quiet</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">AC & Wi-Fi</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Hot Shower</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-neutral-400 block">Starting from</span>
+                                <span class="text-lg font-bold text-white">IDR 250k <span class="text-xs text-neutral-400 font-normal">/ night</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234561555?text=Hello,%20I%20would%20like%20to%20book%20Queen%20BedRoom%20Smart%20Saver%20(3rd%20Floor)." target="_blank" class="bg-white hover:bg-neutral-200 text-black text-sm font-bold px-5 py-2.5 rounded-full shadow-md transition-all">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 4 -->
+                <div class="room-card bg-brand-dark rounded-3xl overflow-hidden border border-white/10 flex flex-col group" data-category="twin">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openRoomModal(3)">
+                        <img src="img\04-Inventory\02-Twin\01-CornerWithView-2ndFloor\01.jpg" alt="Twin BedRoom Corner With View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
+                            2nd Floor
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            1 Room Available
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> View Photos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold">Twin Bed (2x 100x200)</span>
+                                <span class="text-xs text-purple-400 font-semibold bg-purple-950/50 px-2.5 py-1 rounded-full border border-purple-900">Corner View</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Twin BedRoom Corner With View - 2nd Floor</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Unique corner layout with dual windows offering pleasing neighborhood views and excellent natural light.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">2 Single Beds</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Corner View</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">AC & Wi-Fi</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-neutral-400 block">Starting from</span>
+                                <span class="text-lg font-bold text-white">IDR 300k <span class="text-xs text-neutral-400 font-normal">/ night</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234561555?text=Hello,%20I%20would%20like%20to%20book%20Twin%20BedRoom%20Corner%20With%20View%20(2nd%20Floor)." target="_blank" class="bg-white hover:bg-neutral-200 text-black text-sm font-bold px-5 py-2.5 rounded-full shadow-md transition-all">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 5 -->
+                <div class="room-card bg-brand-dark rounded-3xl overflow-hidden border border-white/10 flex flex-col group" data-category="twin">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openRoomModal(4)">
+                        <img src="img\04-Inventory\02-Twin\02-WithBalcony-2ndFloor\01.jpg" alt="Twin BedRoom with Balcony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
+                            2nd Floor
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            4 Rooms Available
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> View Photos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold">Twin Bed (2x 100x200)</span>
+                                <span class="text-xs text-amber-400 font-semibold bg-amber-950/50 px-2.5 py-1 rounded-full border border-amber-900">Balcony</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Twin BedRoom with Balcony - 2nd Floor</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Features two comfortable single beds and a private outdoor balcony. Ideal for colleagues or friends.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">2 Single Beds</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Private Balcony</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">AC & Wi-Fi</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-neutral-400 block">Starting from</span>
+                                <span class="text-lg font-bold text-white">IDR 330k <span class="text-xs text-neutral-400 font-normal">/ night</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234561555?text=Hello,%20I%20would%20like%20to%20book%20Twin%20BedRoom%20with%20Balcony%20(2nd%20Floor)." target="_blank" class="bg-white hover:bg-neutral-200 text-black text-sm font-bold px-5 py-2.5 rounded-full shadow-md transition-all">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 6 -->
+                <div class="room-card bg-brand-dark rounded-3xl overflow-hidden border border-white/10 flex flex-col group" data-category="twin">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openRoomModal(5)">
+                        <img src="img\04-Inventory\02-Twin\03-CornerWithView-3rdFloor\01.jpg" alt="Twin BedRoom Corner with View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
+                            3rd Floor
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            1 Room Available
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> View Photos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold">Twin Bed (2x 100x200)</span>
+                                <span class="text-xs text-purple-400 font-semibold bg-purple-950/50 px-2.5 py-1 rounded-full border border-purple-900">Top Corner View</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Twin BedRoom Corner with View - 3rd Floor</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Elevated corner placement on the 3rd floor providing panoramic neighborhood breeze and absolute privacy.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">2 Single Beds</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Top Floor View</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">AC & Wi-Fi</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-neutral-400 block">Starting from</span>
+                                <span class="text-lg font-bold text-white">IDR 310k <span class="text-xs text-neutral-400 font-normal">/ night</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234561555?text=Hello,%20I%20would%20like%20to%20book%20Twin%20BedRoom%20Corner%20with%20View%20(3rd%20Floor)." target="_blank" class="bg-white hover:bg-neutral-200 text-black text-sm font-bold px-5 py-2.5 rounded-full shadow-md transition-all">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 7 -->
+                <div class="room-card bg-brand-dark rounded-3xl overflow-hidden border border-white/10 flex flex-col group lg:col-span-3 max-w-xl mx-auto w-full" data-category="twin">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openRoomModal(6)">
+                        <img src="img\04-Inventory\02-Twin\04-WithGrandBalcony-3rdFloor\01.jpg" alt="Twin BedRoom With Grand Balcony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
+                            3rd Floor
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            3 Rooms Available
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> View Photos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs uppercase tracking-wider text-neutral-400 font-bold">Twin Bed (2x 100x200)</span>
+                                <span class="text-xs text-amber-400 font-semibold bg-amber-950/50 px-2.5 py-1 rounded-full border border-amber-900">Grand Balcony</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Twin BedRoom With Grand Balcony - 3rd Floor</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Our premium twin accommodation featuring an expansive grand balcony with stunning elevated views.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">2 Single Beds</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">Grand Balcony</span>
+                                <span class="text-xs bg-[#262626] text-neutral-300 px-3 py-1 rounded-full">AC & Wi-Fi</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-neutral-400 block">Starting from</span>
+                                <span class="text-lg font-bold text-white">IDR 360k <span class="text-xs text-neutral-400 font-normal">/ night</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234561555?text=Hello,%20I%20would%20like%20to%20book%20Twin%20BedRoom%20With%20Grand%20Balcony%20(3rd%20Floor)." target="_blank" class="bg-white hover:bg-neutral-200 text-black text-sm font-bold px-5 py-2.5 rounded-full shadow-md transition-all">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="video" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-brand-dark rounded-3xl border border-white/10 overflow-hidden p-8 sm:p-12 relative">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <span class="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3 block">Virtual Guesthouse Experience</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Take a Video Tour</h2>
+                <p class="text-brand-muted text-sm sm:text-base font-light">
+                    Immerse yourself in the serene atmosphere, immaculate rooms, and modern amenities of Grand Kebonsari Syariah through our walkthrough video.
+                </p>
+            </div>
+
+            <!-- Responsive Video Container -->
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black">
+                <!-- Embedded Video Placeholder (Using a professional hotel showcase video or reliable embed) -->
+                <iframe class="w-full h-full object-cover" src="https://www.youtube.com/embed/jEPkkXpPMD4" title="Grand Kebonsari Syariah Video Tour" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="py-24 bg-[#161616]/30 border-y border-[#262626]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 bg-[#161616] border border-[#262626] px-4 py-2 rounded-full mb-4">
+                    <span class="text-xs font-semibold tracking-wider uppercase text-neutral-300">Visual Tour</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+                    Captured Moments of Grand Kebonsari
+                </h2>
+                <p class="text-neutral-400 text-base sm:text-lg">
+                    Click any image to view in high-resolution lightbox.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div onclick="openLightbox(this)" class="gallery-item group relative h-72 rounded-3xl overflow-hidden border border-[#262626] cursor-pointer bg-[#161616]">
+                    <img src="img/02-RunPics/Run-01.jpg" alt="Deluxe Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div onclick="openLightbox(this)" class="gallery-item group relative h-72 rounded-3xl overflow-hidden border border-[#262626] cursor-pointer bg-[#161616]">
+                    <img src="img/02-RunPics/Run-02.jpg" alt="Balcony View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div onclick="openLightbox(this)" class="gallery-item group relative h-72 rounded-3xl overflow-hidden border border-[#262626] cursor-pointer bg-[#161616]">
+                    <img src="img/02-RunPics/Run-03.jpg" alt="Interior Styling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div onclick="openLightbox(this)" class="gallery-item group relative h-72 rounded-3xl overflow-hidden border border-[#262626] cursor-pointer bg-[#161616]">
+                    <img src="img/02-RunPics/Run-04.jpg" alt="Bathroom Cleanliness" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div onclick="openLightbox(this)" class="gallery-item group relative h-72 rounded-3xl overflow-hidden border border-[#262626] cursor-pointer bg-[#161616]">
+                    <img src="img/02-RunPics/Run-05.jpg" alt="Hotel Lounge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div onclick="openLightbox(this)" class="gallery-item group relative h-72 rounded-3xl overflow-hidden border border-[#262626] cursor-pointer bg-[#161616]">
+                    <img src="img/02-RunPics/Run-06.jpg" alt="Surabaya Surroundings" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white bg-[#161616] p-3 rounded-full border border-[#262626] hover:bg-[#262626]">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Lightbox Preview" class="max-w-full max-h-[85vh] rounded-3xl object-contain border border-[#262626]">
+    </div>
+  
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 bg-[#161616] border border-[#262626] px-4 py-2 rounded-full mb-4">
+                    <span class="text-xs font-semibold tracking-wider uppercase text-neutral-300">Got Questions?</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-neutral-400 text-base sm:text-lg">
+                    Everything you need to know about booking and staying at Grand Kebonsari Syariah.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-[#262626] bg-[#161616] rounded-3xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-bold text-white hover:text-neutral-300 transition-colors">
+                        <span>What are the check-in and check-out times?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-neutral-400 text-sm leading-relaxed">
+                        Check-in time is from 14:00 (2:00 PM) onwards, and check-out time is until 12:00 (noon). 24-hour front desk is available to assist you with late check-ins.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-[#262626] bg-[#161616] rounded-3xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-bold text-white hover:text-neutral-300 transition-colors">
+                        <span>What is the Syariah policy for couples?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-neutral-400 text-sm leading-relaxed">
+                        As a Syariah-compliant guest house, couples checking into the same room are kindly requested to provide proof of marriage (such as a marriage certificate / KTP with same address or official marriage book) upon check-in.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-[#262626] bg-[#161616] rounded-3xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-bold text-white hover:text-neutral-300 transition-colors">
+                        <span>How many total rooms does the hotel have?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-neutral-400 text-sm leading-relaxed">
+                        Grand Kebonsari Syariah features a cozy boutique total of 21 rooms across Queen Size Bed and Twin Bed configurations distributed over 3 floors.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-[#262626] bg-[#161616] rounded-3xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-bold text-white hover:text-neutral-300 transition-colors">
+                        <span>Is parking available for guests?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-neutral-400 text-sm leading-relaxed">
+                        Yes, we offer complimentary secure parking space for both cars and motorcycles directly on site.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map Section -->
+    <section id="location" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-[#161616] border border-[#262626] px-4 py-2 rounded-full">
+                        <span class="text-xs font-semibold tracking-wider uppercase text-neutral-300">Strategic Location</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                        Conveniently Situated in South Surabaya
+                    </h2>
+                    <p class="text-neutral-400 text-base leading-relaxed">
+                        Grand Kebonsari Syariah is located in a quiet residential enclave yet provides swift access to major landmarks, shopping malls, and transportation hubs.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl bg-[#161616] border border-[#262626]">
+                            <div class="p-3 rounded-xl bg-white text-black">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Address</h4>
+                                <p class="text-sm text-neutral-400 mt-1">Jl. Gayung Kebonsari V No.11, Ketintang, Kec. Gayungan, Surabaya, Jawa Timur 60235</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl bg-[#161616] border border-[#262626]">
+                            <div class="p-3 rounded-xl bg-white text-black">
+                                <i data-lucide="navigation" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Nearby Landmarks</h4>
+                                <ul class="text-sm text-neutral-400 mt-1 space-y-1">
+                                    <li>• Al Akbar National Mosque (approx. 5 mins)</li>
+                                    <li>• Royal Plaza Surabaya & CITO Mall (approx. 5-10 mins)</li>
+                                    <li>• Juanda International Airport (approx. 20-25 mins via toll)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6281234561555?text=Hello%20Grand%20Kebonsari%20Syariah,%20I%20would%20like%20directions%20and%20reservation%20info." target="_blank" class="inline-flex items-center gap-2 bg-white text-black hover:bg-neutral-200 px-6 py-3 rounded-full text-xs font-bold uppercase transition-all">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Chat with Reception
+                    </a>
+                </div>
+
+                <!-- Map Placeholder / Styled Card -->
+                <div class="rounded-3xl overflow-hidden border border-white/10 h-96 bg-brand-dark relative flex items-center justify-center group">
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="relative z-10 text-center p-6">
+                        <div class="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center mx-auto mb-4 text-2xl shadow-xl">
+                            <i class="fa-solid fa-map-pin"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Grand Kebonsari Syariah</h3>
+                        <p class="text-xs text-brand-muted mb-6">Surabaya, East Java</p>
+                        <a href="https://g.page/grandkebonsari" target="_blank" class="bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/20 transition-all">
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-[#161616]/30 border-y border-[#262626]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 bg-[#161616] border border-[#262626] px-4 py-2 rounded-full mb-4">
+                    <span class="text-xs font-semibold tracking-wider uppercase text-neutral-300">Guest Reviews</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+                    Loved by Families & Travelers
+                </h2>
+                <p class="text-neutral-400 text-base sm:text-lg">
+                    Read what our esteemed guests have to say about their stay at Grand Kebonsari Syariah.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-[#161616] border border-[#262626] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 mb-4 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            "Handuk dan sprei putih bersih serta harum banget! Kamarnya nyaman, AC dingin, dan kamar mandinya sangat bersih. Staf sangat ramah dan lokasi sangat tenang."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-[#262626]">
+                        <div class="w-10 h-10 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm">
+                            DV
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Devita</h4>
+                            <span class="text-xs text-neutral-400">Verified Guest (Google Review)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-[#161616] border border-[#262626] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 mb-4 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            "Habis mengantar keluarga ke Juanda berangkat umroh, mampir menginap di sini. Alhamdulillah kamarnya bersih, rapi, AC dingin, air hangat lancar, dan disediakan sajadah alquran."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-[#262626]">
+                        <div class="w-10 h-10 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm">
+                            MM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Mazdana M.</h4>
+                            <span class="text-xs text-neutral-400">Verified Guest (Traveloka)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-[#161616] border border-[#262626] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 mb-4 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            "Tempatnya nyaman dan tenang di dalam komplek perumahan, jauh dari polusi. Sangat islami, bersih, dan harga terjangkau. Recommended banget untuk keluarga."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-[#262626]">
+                        <div class="w-10 h-10 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm">
+                            ST
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Sugeng T.H.</h4>
+                            <span class="text-xs text-neutral-400">Verified Guest (Agoda)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Google Business Rate Us Section -->
+    <section class="py-20 bg-white text-black relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-black text-white text-xs font-semibold uppercase tracking-widest mb-6">
+                <i class="fa-solid fa-star text-yellow-400"></i> Google Business Review
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-black tracking-tight mb-6">Loved Your Stay With Us?</h2>
+            <p class="max-w-2xl mx-auto text-neutral-600 text-sm sm:text-base mb-8 font-light leading-relaxed">
+                Your feedback helps us maintain our standard of excellence and helps fellow travelers discover our peaceful Syariah guesthouse in Surabaya. Please take a moment to leave us a 5-star review!
+            </p>
+            <div class="flex items-center justify-center gap-2 mb-8 text-yellow-500 text-2xl">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="https://g.page/grandkebonsari" target="_blank" class="inline-flex items-center gap-3 bg-black text-white hover:bg-neutral-800 px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase transition-all shadow-2xl">
+                <i class="fa-brands fa-google text-lg"></i> Rate Us on Google Business
+            </a>
+        </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <div class="h-10 px-3 py-1.5 rounded-xl bg-white flex items-center justify-center shadow-md">
+                    <img src="img/Logo.png" alt="Grand Kebonsari Syariah Logo" class="h-full w-auto object-contain">
+                </div>
+            </div>
+            <p class="text-xs text-brand-muted font-light">
+                &copy; 2026 Grand Kebonsari Syariah. All rights reserved. Designed with modern excellence.
+            </p>
+            <div class="flex items-center gap-4 text-sm text-brand-muted">
+                <a href="https://g.page/grandkebonsari" target="_blank" class="hover:text-white transition-colors"><i class="fa-solid fa-star text-yellow-400"></i> Rate Us</a>
+                <a href="#home" class="hover:text-white transition-colors">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Room Photo Modal -->
+    <div id="room-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="bg-brand-dark border border-white/15 rounded-3xl max-w-2xl w-full overflow-hidden relative shadow-2xl">
+            <!-- Close Button -->
+            <button onclick="closeRoomModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center transition-all border border-white/10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Modal Image Slider Container -->
+            <div class="relative h-72 sm:h-96 overflow-hidden bg-black">
+                <img id="modal-img" src="" alt="Room Photo" class="w-full h-full object-cover transition-all duration-300">
+                <!-- Navigation Arrows -->
+                <button onclick="prevModalImg()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center transition-all border border-white/10">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="nextModalImg()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center transition-all border border-white/10">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-between items-start mb-3">
+                    <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                    <span id="modal-badge" class="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-white"></span>
+                </div>
+                <p id="modal-desc" class="text-xs sm:text-sm text-brand-muted mb-6 leading-relaxed"></p>
+                
+                <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                    <span id="modal-units" class="text-xs text-brand-muted font-medium"></span>
+                    <a id="modal-whatsapp" href="#" target="_blank" class="bg-white text-black hover:bg-neutral-200 px-6 py-3 rounded-full text-xs font-bold uppercase transition-all">Book This Room</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons safely once DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Lightbox Functions
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        }
+      
+        // FAQ Accordion Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg') || button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            if (icon) {
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        }
+
+        // Hero Slideshow Logic
+        const slides = document.querySelectorAll('#hero-slideshow .slide');
+        let currentSlide = 0;
+        if (slides.length > 0) {
+            setInterval(() => {
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+            }, 4000);
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Room Filtering
+        const filterButtons = document.querySelectorAll('.room-filter');
+        const roomCards = document.querySelectorAll('.room-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    // Remove active styling and ADD the hover effect back to inactive buttons
+                    b.classList.remove('active', 'bg-white', 'text-black');
+                    b.classList.add('bg-brand-dark', 'text-brand-muted', 'hover:text-white');
+                });
+                
+                // Add active styling and REMOVE the hover effect from the clicked button
+                btn.classList.add('active', 'bg-white', 'text-black');
+                btn.classList.remove('bg-brand-dark', 'text-brand-muted', 'hover:text-white');
+
+                const filter = btn.getAttribute('data-filter');
+                roomCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Room Data for Modal Gallery
+        const roomsData = [
+            {
+                title: "Queen BedRoom - Easy Access",
+                badge: "Ground Floor • Queen (160x200)",
+                units: "7 Units Available",
+                desc: "Convenient ground floor access with zero stairs, perfect for families and elderly guests seeking maximum comfort and ease of movement.",
+                images: [
+                    "img/04-Inventory/01-Queen/01-EasyAccess-GF/01.jpg",
+                    "img/04-Inventory/01-Queen/01-EasyAccess-GF/02.jpg",
+                    "img/04-Inventory/01-Queen/01-EasyAccess-GF/03.jpg",
+                    "img/04-Inventory/01-Queen/01-EasyAccess-GF/04.jpg",
+                    "img/04-Inventory/01-Queen/01-EasyAccess-GF/05.jpg",
+                    "img/04-Inventory/01-Queen/01-EasyAccess-GF/06.jpg",
+                    "img/04-Inventory/01-Queen/01-EasyAccess-GF/07.jpg"
+                ],
+                whatsapp: "https://wa.me/6281234561555?text=Hello,%20I%20want%20to%20book%20Queen%20BedRoom%20-%20Easy%20Access%20(Ground%20Floor)."
+            },
+            {
+                title: "Queen BedRoom - with Balcony",
+                badge: "2nd Floor • Queen (160x200)",
+                units: "3 Units Available",
+                desc: "Features a private outdoor balcony on the 2nd floor, ideal for enjoying fresh Surabaya air and serene neighborhood views.",
+                images: [
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/01.jpeg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/02.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/03.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/04.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/05.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/06.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/07.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/08.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/09.jpg",
+                    "img/04-Inventory/01-Queen/02-With Balcony-2ndFloor/10.jpg"
+                ],
+                whatsapp: "https://wa.me/6281234561555?text=Hello,%20I%20want%20to%20book%20Queen%20BedRoom%20-%20with%20Balcony%20(2nd%20Floor)."
+            },
+            {
+                title: "Queen BedRoom - Smart Saver",
+                badge: "3rd Floor • Queen (160x200)",
+                units: "2 Units Available",
+                desc: "Budget-friendly comfort located on the top 3rd floor. Cozy, quiet, and fully equipped with high-speed Wi-Fi and modern amenities.",
+                images: [
+                    "img/04-Inventory/01-Queen/03-Smart Saver-3rdFloor/01.jpg",
+                    "img/04-Inventory/01-Queen/03-Smart Saver-3rdFloor/02.jpg",
+                    "img/04-Inventory/01-Queen/03-Smart Saver-3rdFloor/03.jpg",
+                    "img/04-Inventory/01-Queen/03-Smart Saver-3rdFloor/04.jpg",
+                    "img/04-Inventory/01-Queen/03-Smart Saver-3rdFloor/05.jpg",
+                    "img/04-Inventory/01-Queen/03-Smart Saver-3rdFloor/06.jpg",
+                    "img/04-Inventory/01-Queen/03-Smart Saver-3rdFloor/07.jpg"
+                ],
+                whatsapp: "https://wa.me/6281234561555?text=Hello,%20I%20want%20to%20book%20Queen%20BedRoom%20-%20Smart%20Saver%20(3rd%20Floor)."
+            },
+            {
+                title: "Twin BedRoom Corner With View",
+                badge: "2nd Floor • 2 Singles (100x200)",
+                units: "1 Unit Available",
+                desc: "Prime corner location on the 2nd floor offering dual-aspect natural lighting and delightful exterior views.",
+                images: [
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/01.jpg",
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/02.jpg",
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/03.jpg",
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/04.jpg",
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/05.jpg",
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/06.jpg",
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/07.jpg",
+                    "img/04-Inventory/02-Twin/01-CornerWithView-2ndFloor/08.jpg"
+                ],
+                whatsapp: "https://wa.me/6281234561555?text=Hello,%20I%20want%20to%20book%20Twin%20BedRoom%20Corner%20With%20View%20(2nd%20Floor)."
+            },
+            {
+                title: "Twin BedRoom with Balcony",
+                badge: "2nd Floor • 2 Singles (100x200)",
+                units: "4 Units Available",
+                desc: "Spacious twin room featuring two comfortable single beds and a private balcony on the 2nd floor.",
+                images: [
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/01.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/02.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/03.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/04.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/05.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/06.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/07.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/08.jpg",
+                    "img/04-Inventory/02-Twin/02-WithBalcony-2ndFloor/09.jpg"
+                ],
+                whatsapp: "https://wa.me/6281234561555?text=Hello,%20I%20want%20to%20book%20Twin%20BedRoom%20with%20Balcony%20(2nd%20Floor)."
+            },
+            {
+                title: "Twin BedRoom Corner with View",
+                badge: "3rd Floor • 2 Singles (100x200)",
+                units: "1 Unit Available",
+                desc: "Top-floor corner twin room offering elevated views, great airflow, and absolute peace and quiet.",
+                images: [
+                    "img/04-Inventory/02-Twin/03-CornerWithView-3rdFloor/01.jpg",
+                    "img/04-Inventory/02-Twin/03-CornerWithView-3rdFloor/02.jpg",
+                    "img/04-Inventory/02-Twin/03-CornerWithView-3rdFloor/03.jpg",
+                    "img/04-Inventory/02-Twin/03-CornerWithView-3rdFloor/04.jpg",
+                    "img/04-Inventory/02-Twin/03-CornerWithView-3rdFloor/05.jpg",
+                    "img/04-Inventory/02-Twin/03-CornerWithView-3rdFloor/06.jpg",
+                    "img/04-Inventory/02-Twin/03-CornerWithView-3rdFloor/07.jpg"
+                ],
+                whatsapp: "https://wa.me/6281234561555?text=Hello,%20I%20want%20to%20book%20Twin%20BedRoom%20Corner%20with%20View%20(3rd%20Floor)."
+            },
+            {
+                title: "Twin BedRoom With Grand Balcony",
+                badge: "3rd Floor • 2 Singles (100x200)",
+                units: "3 Units Available",
+                desc: "Our premium twin accommodation featuring an expansive grand private balcony on the 3rd floor for ultimate relaxation.",
+                images: [
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/01.jpg",
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/02.jpg",
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/03.jpg",
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/04.jpg",
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/05.jpg",
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/06.jpg",
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/07.jpg",
+                    "img/04-Inventory/02-Twin/04-WithGrandBalcony-3rdFloor/08.jpg"
+                ],
+                whatsapp: "https://wa.me/6281234561555?text=Hello,%20I%20want%20to%20book%20Twin%20BedRoom%20With%20Grand%20Balcony%20(3rd%20Floor)."
+            }
+        ];
+
+        let currentRoomIndex = 0;
+        let currentImgIndex = 0;
+
+        function openRoomModal(index) {
+            currentRoomIndex = index;
+            currentImgIndex = 0;
+            updateModalContent();
+            const modal = document.getElementById('room-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeRoomModal() {
+            const modal = document.getElementById('room-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function updateModalContent() {
+            const room = roomsData[currentRoomIndex];
+            document.getElementById('modal-title').innerText = room.title;
+            document.getElementById('modal-badge').innerText = room.badge;
+            document.getElementById('modal-desc').innerText = room.desc;
+            document.getElementById('modal-units').innerHTML = `<i class="fa-solid fa-door-open mr-1.5"></i> ${room.units}`;
+            document.getElementById('modal-whatsapp').href = room.whatsapp;
+            document.getElementById('modal-img').src = room.images[currentImgIndex];
+        }
+
+        function nextModalImg() {
+            const room = roomsData[currentRoomIndex];
+            currentImgIndex = (currentImgIndex + 1) % room.images.length;
+            document.getElementById('modal-img').src = room.images[currentImgIndex];
+        }
+
+        function prevModalImg() {
+            const room = roomsData[currentRoomIndex];
+            currentImgIndex = (currentImgIndex - 1 + room.images.length) % room.images.length;
+            document.getElementById('modal-img').src = room.images[currentImgIndex];
+        }
+
+        // Close modal or lightbox on outside click
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('room-modal');
+            const lightbox = document.getElementById('lightbox');
+            if (e.target === modal) {
+                closeRoomModal();
+            }
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
